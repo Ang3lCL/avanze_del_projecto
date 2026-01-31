@@ -81,12 +81,10 @@ public class avance_projecto {
 
         Scanner sc = new Scanner(System.in);
 
-        // ===== USUARIOS =====
         Cliente[] usuarios = new Cliente[10];
         int totalUsuarios = 0;
         Cliente usuarioActual = null;
 
-        // ===== LIBROS =====
         Libro libro1 = new Libro("El Señor de los Anillos", "Tolkien", "Fantasía", 1954, 3);
         Libro libro2 = new Libro("Cien años de soledad", "García Márquez", "Novela", 1967, 2);
         Libro libro3 = new Libro("La metamorfosis", "Kafka", "Novela", 1915, 4);
@@ -94,7 +92,7 @@ public class avance_projecto {
         Libro libro5 = new Libro("Estravagario", "Pablo Neruda", "Poesía", 1958, 3);
         Libro libro6 = new Libro("Danza de Dragones", "George R. R. Martin", "Fantasía", 2011, 2);
 
-        // ===== CREAR / SELECCIONAR USUARIO =====
+
         System.out.print(" Tienes un usuario? (si/no): ");
         String respuesta = sc.nextLine();
 
@@ -140,7 +138,6 @@ public class avance_projecto {
                 return;
             }
 
-        // ===== MENÚ =====
         int opcion;
         do {
             System.out.println("\n=== MENÚ BIBLIOTECA ===");
