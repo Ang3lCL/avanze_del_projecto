@@ -61,7 +61,6 @@ class Cliente {
     int id;
     int librosPrestados;
 
-
     public Cliente(String nombre, int edad, int id) {
         this.nombre = nombre;
         this.edad = edad;
@@ -72,7 +71,6 @@ class Cliente {
     public Cliente() {
         this.librosPrestados = 0;
     }
-
 }
 
 public class avance_projecto {
@@ -81,20 +79,17 @@ public class avance_projecto {
 
         Scanner sc = new Scanner(System.in);
 
-        // ===== USUARIOS =====
         Cliente[] usuarios = new Cliente[10];
         int totalUsuarios = 0;
         Cliente usuarioActual = null;
 
-        // ===== LIBROS =====
         Libro libro1 = new Libro("El Señor de los Anillos", "Tolkien", "Fantasía", 1954, 3);
         Libro libro2 = new Libro("Cien años de soledad", "García Márquez", "Novela", 1967, 2);
         Libro libro3 = new Libro("La metamorfosis", "Kafka", "Novela", 1915, 4);
-        Libro libro4 = new Libro("La odisea", "Homero", "Epopeya", 700, 2);
+        Libro libro4 = new Libro("La odisea", "Homero", "Epopeya", 0, 2);
         Libro libro5 = new Libro("Estravagario", "Pablo Neruda", "Poesía", 1958, 3);
         Libro libro6 = new Libro("Danza de Dragones", "George R. R. Martin", "Fantasía", 2011, 2);
 
-        // ===== CREAR / SELECCIONAR USUARIO =====
         System.out.print(" Tienes un usuario? (si/no): ");
         String respuesta = sc.nextLine();
 
@@ -140,7 +135,6 @@ public class avance_projecto {
                 return;
             }
 
-        // ===== MENÚ =====
         int opcion;
         do {
             System.out.println("\n=== MENÚ BIBLIOTECA ===");
@@ -175,7 +169,7 @@ public class avance_projecto {
                         break;
                     }
 
-                    System.out.println("\n¿Qué libro quieres pedir prestado?");
+                    System.out.println("\nQué libro quieres pedir prestado?");
                     System.out.println("1. " + libro1.getTitulo());
                     System.out.println("2. " + libro2.getTitulo());
                     System.out.println("3. " + libro3.getTitulo());
@@ -202,7 +196,7 @@ public class avance_projecto {
                     break;
 
                 case 3:
-                    System.out.println("\n¿Qué libro quieres devolver?");
+                    System.out.println("\nQué libro quieres devolver?");
                     System.out.println("1. " + libro1.getTitulo());
                     System.out.println("2. " + libro2.getTitulo());
                     System.out.println("3. " + libro3.getTitulo());

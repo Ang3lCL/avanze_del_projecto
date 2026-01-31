@@ -1,7 +1,7 @@
 ## Avance del proyecto
 
 **Enunciado**  
-crear un sistema de biblioteca que tenga lo siguiente:
+aqui se creo un sistema de biblioteca que tiene lo siguiente:
 Debe permitir registrar y consultar libros, usuarios y préstamos.
 Debe validar que los datos ingresados sean correctos y coherentes.
 Debe controlar que no se presten más libros de los que hay disponibles ni que se exceda el límite de dos ejemplares por usuario.
@@ -92,12 +92,12 @@ public class avance_projecto {
 
         Scanner sc = new Scanner(System.in);
 
-        // ===== USUARIOS =====
+
         Cliente[] usuarios = new Cliente[10];
         int totalUsuarios = 0;
         Cliente usuarioActual = null;
 
-        // ===== LIBROS =====
+
         Libro libro1 = new Libro("El Señor de los Anillos", "Tolkien", "Fantasía", 1954, 3);
         Libro libro2 = new Libro("Cien años de soledad", "García Márquez", "Novela", 1967, 2);
         Libro libro3 = new Libro("La metamorfosis", "Kafka", "Novela", 1915, 4);
@@ -105,7 +105,7 @@ public class avance_projecto {
         Libro libro5 = new Libro("Estravagario", "Pablo Neruda", "Poesía", 1958, 3);
         Libro libro6 = new Libro("Danza de Dragones", "George R. R. Martin", "Fantasía", 2011, 2);
 
-        // ===== CREAR / SELECCIONAR USUARIO =====
+
         System.out.print(" Tienes un usuario? (si/no): ");
         String respuesta = sc.nextLine();
 
@@ -150,8 +150,7 @@ public class avance_projecto {
                 sc.close();
                 return;
             }
-
-        // ===== MENÚ =====
+=
         int opcion;
         do {
             System.out.println("\n=== MENÚ BIBLIOTECA ===");
@@ -260,4 +259,154 @@ public class avance_projecto {
 
 ````
 **Salida real**  
+Tienes un usuario? (si/no): no
+Quieres crear un usuario? (si/no): si
+Creando nuevo usuario
+Escribe tu nombre: Angel
+Ingresa tu edad: 18
+Elige un ID de 4 dígitos (ex. 1234): 1404
+Usuario creado
+Bienvenido Angel
 
+=== MENÚ BIBLIOTECA ===
+1. Ver información de los libros
+2. Pedir prestado un libro
+3. Devolver un libro
+4. Ver cantidad de libros que tienes
+5. Salir
+Elige una opción: 1
+
+--- Libro 1 ---
+Título: El Señor de los Anillos
+Autor: Tolkien
+Género: Fantasía
+Año: 1954
+Copias totales: 3
+Prestadas: 0
+Disponibles: 3
+
+--- Libro 2 ---
+Título: Cien años de soledad
+Autor: García Márquez
+Género: Novela
+Año: 1967
+Copias totales: 2
+Prestadas: 0
+Disponibles: 2
+
+--- Libro 3 ---
+Título: La metamorfosis
+Autor: Kafka
+Género: Novela
+Año: 1915
+Copias totales: 4
+Prestadas: 0
+Disponibles: 4
+
+--- Libro 4 ---
+Título: La odisea
+Autor: Homero
+Género: Epopeya
+Año: 700
+Copias totales: 2
+Prestadas: 0
+Disponibles: 2
+
+--- Libro 5 ---
+Título: Estravagario
+Autor: Pablo Neruda
+Género: Poesía
+Año: 1958
+Copias totales: 3
+Prestadas: 0
+Disponibles: 3
+
+--- Libro 6 ---
+Título: Danza de Dragones
+Autor: George R. R. Martin
+Género: Fantasía
+Año: 2011
+Copias totales: 2
+Prestadas: 0
+Disponibles: 2
+
+=== MENÚ BIBLIOTECA ===
+1. Ver información de los libros
+2. Pedir prestado un libro
+3. Devolver un libro
+4. Ver cantidad de libros que tienes
+5. Salir
+Elige una opción: 2
+
+¿Qué libro quieres pedir prestado?
+1. El Señor de los Anillos
+2. Cien años de soledad
+3. La metamorfosis
+4. La odisea
+5. Estravagario
+6. Danza de Dragones
+Opción: 1
+Préstamo realizado con éxito.
+
+=== MENÚ BIBLIOTECA ===
+1. Ver información de los libros
+2. Pedir prestado un libro
+3. Devolver un libro
+4. Ver cantidad de libros que tienes
+5. Salir
+Elige una opción: 2
+
+¿Qué libro quieres pedir prestado?
+1. El Señor de los Anillos
+2. Cien años de soledad
+3. La metamorfosis
+4. La odisea
+5. Estravagario
+6. Danza de Dragones
+Opción: 4
+Préstamo realizado con éxito.
+
+=== MENÚ BIBLIOTECA ===
+1. Ver información de los libros
+2. Pedir prestado un libro
+3. Devolver un libro
+4. Ver cantidad de libros que tienes
+5. Salir
+Elige una opción: 2
+No puedes pedir más de 2 libros.
+
+=== MENÚ BIBLIOTECA ===
+1. Ver información de los libros
+2. Pedir prestado un libro
+3. Devolver un libro
+4. Ver cantidad de libros que tienes
+5. Salir
+Elige una opción: 4
+Libros prestados por Angel: 2
+
+=== MENÚ BIBLIOTECA ===
+1. Ver información de los libros
+2. Pedir prestado un libro
+3. Devolver un libro
+4. Ver cantidad de libros que tienes
+5. Salir
+Elige una opción: 3
+
+¿Qué libro quieres devolver?
+1. El Señor de los Anillos
+2. Cien años de soledad
+3. La metamorfosis
+4. La odisea
+5. Estravagario
+6. Danza de Dragones
+Opción: 4
+Devolución completada.
+
+=== MENÚ BIBLIOTECA ===
+1. Ver información de los libros
+2. Pedir prestado un libro
+3. Devolver un libro
+4. Ver cantidad de libros que tienes
+5. Salir
+Elige una opción: 5
+Saliendo de la biblioteca...
